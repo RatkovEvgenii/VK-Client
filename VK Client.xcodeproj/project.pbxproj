@@ -7,23 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844AAA7A25A12B51009BB6BC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844AAA7925A12B51009BB6BC /* CustomImageView.swift */; };
 		844DC74C259D28A0007AC6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC74B259D28A0007AC6F3 /* AppDelegate.swift */; };
 		844DC74E259D28A0007AC6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC74D259D28A0007AC6F3 /* SceneDelegate.swift */; };
-		844DC750259D28A0007AC6F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC74F259D28A0007AC6F3 /* ViewController.swift */; };
 		844DC753259D28A0007AC6F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DC751259D28A0007AC6F3 /* Main.storyboard */; };
 		844DC755259D28A1007AC6F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DC754259D28A1007AC6F3 /* Assets.xcassets */; };
 		844DC758259D28A1007AC6F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DC756259D28A1007AC6F3 /* LaunchScreen.storyboard */; };
+		8450C40325A24A50006D6B55 /* LikeButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C40225A24A50006D6B55 /* LikeButtom.swift */; };
+		84559AE725A0B93E00AA8E41 /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559AE625A0B93E00AA8E41 /* BarViewController.swift */; };
+		84559AEB25A0BCA100AA8E41 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559AEA25A0BCA100AA8E41 /* UserCell.swift */; };
+		84559AEE25A0BCB600AA8E41 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559AED25A0BCB600AA8E41 /* GroupCell.swift */; };
+		84559AF425A0BF4200AA8E41 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559AF325A0BF4200AA8E41 /* FriendsViewController.swift */; };
+		84559AF825A0BF8A00AA8E41 /* UserGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559AF725A0BF8A00AA8E41 /* UserGroupViewController.swift */; };
+		84559AFB25A0BFC800AA8E41 /* AllGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559AFA25A0BFC800AA8E41 /* AllGroupTableViewController.swift */; };
+		84559AFE25A0C00E00AA8E41 /* AllGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559AFD25A0C00E00AA8E41 /* AllGroupViewCell.swift */; };
+		84559B0225A0C0D300AA8E41 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559B0125A0C0D300AA8E41 /* FriendCollectionViewController.swift */; };
+		84559B0525A0C0EC00AA8E41 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559B0425A0C0EC00AA8E41 /* FriendCollectionViewCell.swift */; };
+		84CE66F4259FD8FA003DACF0 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */; };
+		84CE66F8259FDAEF003DACF0 /* Login2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE66F7259FDAEF003DACF0 /* Login2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		844AAA7925A12B51009BB6BC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		844DC748259D28A0007AC6F3 /* VK Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DC74B259D28A0007AC6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844DC74D259D28A0007AC6F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		844DC74F259D28A0007AC6F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		844DC752259D28A0007AC6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844DC754259D28A1007AC6F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844DC757259D28A1007AC6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844DC759259D28A1007AC6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8450C40225A24A50006D6B55 /* LikeButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtom.swift; sourceTree = "<group>"; };
+		84559AE625A0B93E00AA8E41 /* BarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
+		84559AEA25A0BCA100AA8E41 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		84559AED25A0BCB600AA8E41 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		84559AF325A0BF4200AA8E41 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		84559AF725A0BF8A00AA8E41 /* UserGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupViewController.swift; sourceTree = "<group>"; };
+		84559AFA25A0BFC800AA8E41 /* AllGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupTableViewController.swift; sourceTree = "<group>"; };
+		84559AFD25A0C00E00AA8E41 /* AllGroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupViewCell.swift; sourceTree = "<group>"; };
+		84559B0125A0C0D300AA8E41 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
+		84559B0425A0C0EC00AA8E41 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		84CE66F7259FDAEF003DACF0 /* Login2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +80,51 @@
 		844DC74A259D28A0007AC6F3 /* VK Client */ = {
 			isa = PBXGroup;
 			children = (
+				84559AE925A0BC7800AA8E41 /* Model */,
 				844DC74B259D28A0007AC6F3 /* AppDelegate.swift */,
 				844DC74D259D28A0007AC6F3 /* SceneDelegate.swift */,
-				844DC74F259D28A0007AC6F3 /* ViewController.swift */,
+				844AAA7925A12B51009BB6BC /* CustomImageView.swift */,
 				844DC751259D28A0007AC6F3 /* Main.storyboard */,
+				8450C40225A24A50006D6B55 /* LikeButtom.swift */,
+				84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */,
 				844DC754259D28A1007AC6F3 /* Assets.xcassets */,
 				844DC756259D28A1007AC6F3 /* LaunchScreen.storyboard */,
+				84559AE625A0B93E00AA8E41 /* BarViewController.swift */,
 				844DC759259D28A1007AC6F3 /* Info.plist */,
+				84CE66F7259FDAEF003DACF0 /* Login2.swift */,
 			);
 			path = "VK Client";
+			sourceTree = "<group>";
+		};
+		84559AE925A0BC7800AA8E41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84559AF225A0BF0B00AA8E41 /* Group */,
+				84559AF025A0BEF500AA8E41 /* User */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84559AF025A0BEF500AA8E41 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				84559B0125A0C0D300AA8E41 /* FriendCollectionViewController.swift */,
+				84559B0425A0C0EC00AA8E41 /* FriendCollectionViewCell.swift */,
+				84559AEA25A0BCA100AA8E41 /* UserCell.swift */,
+				84559AF325A0BF4200AA8E41 /* FriendsViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		84559AF225A0BF0B00AA8E41 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				84559AED25A0BCB600AA8E41 /* GroupCell.swift */,
+				84559AFA25A0BFC800AA8E41 /* AllGroupTableViewController.swift */,
+				84559AF725A0BF8A00AA8E41 /* UserGroupViewController.swift */,
+				84559AFD25A0C00E00AA8E41 /* AllGroupViewCell.swift */,
+			);
+			path = Group;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +197,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844DC750259D28A0007AC6F3 /* ViewController.swift in Sources */,
+				84559AFE25A0C00E00AA8E41 /* AllGroupViewCell.swift in Sources */,
+				84559AF425A0BF4200AA8E41 /* FriendsViewController.swift in Sources */,
+				84559AEE25A0BCB600AA8E41 /* GroupCell.swift in Sources */,
+				844AAA7A25A12B51009BB6BC /* CustomImageView.swift in Sources */,
 				844DC74C259D28A0007AC6F3 /* AppDelegate.swift in Sources */,
+				84559AE725A0B93E00AA8E41 /* BarViewController.swift in Sources */,
+				84559AF825A0BF8A00AA8E41 /* UserGroupViewController.swift in Sources */,
+				84559AEB25A0BCA100AA8E41 /* UserCell.swift in Sources */,
+				84CE66F4259FD8FA003DACF0 /* LoginFormController.swift in Sources */,
+				84CE66F8259FDAEF003DACF0 /* Login2.swift in Sources */,
 				844DC74E259D28A0007AC6F3 /* SceneDelegate.swift in Sources */,
+				84559B0225A0C0D300AA8E41 /* FriendCollectionViewController.swift in Sources */,
+				84559AFB25A0BFC800AA8E41 /* AllGroupTableViewController.swift in Sources */,
+				8450C40325A24A50006D6B55 /* LikeButtom.swift in Sources */,
+				84559B0525A0C0EC00AA8E41 /* FriendCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
