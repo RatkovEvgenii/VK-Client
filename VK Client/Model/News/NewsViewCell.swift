@@ -1,18 +1,14 @@
 //
-//  AllGroupViewCell.swift
+//  NewsViewCell.swift
 //  VK Client
 //
-//  Created by Admin on 02.01.2021.
+//  Created by Admin on 21.02.2021.
 //
 
 import UIKit
 
-class AllGroupViewCell: UITableViewCell {
+class NewsViewCell: UITableViewCell {
 
-    @IBOutlet weak var groupIcon: UIImageView!
-    @IBOutlet weak var groupName: UILabel!
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

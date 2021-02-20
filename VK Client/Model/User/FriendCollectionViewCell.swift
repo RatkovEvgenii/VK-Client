@@ -8,7 +8,8 @@
 import UIKit
 
 class FriendCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var userPhoto: UIView!
+    
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userPhoto: UIImageView!
     
 }
