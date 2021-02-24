@@ -12,6 +12,7 @@ class FriendsViewController: UITableViewController {
     
     //var friends = ["Сергей Петров","Ольга Куликова","Яша Гогунский","Володя Собалев","Илья Кузьмин","Гриша Петренко","Настена Ивановна"]
     
+    @IBOutlet weak var searchBar: UISearchBar!
     var contacts = [Contact (name: "Сергей Петров", icon: UIImage(named: "userIcon")!),
                     Contact (name: "Ольга Куликова", icon: UIImage(named: "userIcon")!),
                     Contact (name: "Яша Гогунский", icon: UIImage(named: "userIcon")!),
