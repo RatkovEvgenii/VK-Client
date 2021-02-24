@@ -325,27 +325,26 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
                                                 <constraint firstAttribute="width" secondItem="CUI-fh-yzr" secondAttribute="height" multiplier="1:1" id="AN9-j3-6SH"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zZP-hT-jQO">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="zZP-hT-jQO">
                                             <rect key="frame" x="0.0" y="504.5" width="414" height="40"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fX8-jN-Gae">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="40"/>
-                                                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fX8-jN-Gae" customClass="LikeButton" customModule="VK_Client" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="40"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXE-ts-cm5">
-                                                    <rect key="frame" x="83" y="0.0" width="82.5" height="40"/>
+                                                    <rect key="frame" x="83" y="0.0" width="82" height="40"/>
                                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-rK-Sun">
-                                                    <rect key="frame" x="165.5" y="0.0" width="83" height="40"/>
+                                                    <rect key="frame" x="166" y="0.0" width="82" height="40"/>
                                                     <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZG4-2F-naz">
-                                                    <rect key="frame" x="248.5" y="0.0" width="82.5" height="40"/>
+                                                    <rect key="frame" x="249" y="0.0" width="82" height="40"/>
                                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8j-mC-YVl">
-                                                    <rect key="frame" x="331" y="0.0" width="83" height="40"/>
+                                                    <rect key="frame" x="332" y="0.0" width="82" height="40"/>
                                                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                 </view>
                                             </subviews>
@@ -519,9 +518,6 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

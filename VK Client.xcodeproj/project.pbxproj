@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84487AA725E7050E00C77B36 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84487AA625E7050E00C77B36 /* LikeButton.swift */; };
 		844AAA7A25A12B51009BB6BC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844AAA7925A12B51009BB6BC /* CustomImageView.swift */; };
 		844DC74C259D28A0007AC6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC74B259D28A0007AC6F3 /* AppDelegate.swift */; };
 		844DC74E259D28A0007AC6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC74D259D28A0007AC6F3 /* SceneDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84487AA625E7050E00C77B36 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		844AAA7925A12B51009BB6BC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		844DC748259D28A0007AC6F3 /* VK Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DC74B259D28A0007AC6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +107,7 @@
 		84559AE925A0BC7800AA8E41 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84C0423825E1C5A600ED8E0C /* Buttoms */,
+				84C0423825E1C5A600ED8E0C /* Buttons */,
 				84C0423725E1C59900ED8E0C /* News */,
 				84559AF225A0BF0B00AA8E41 /* Group */,
 				84559AF025A0BEF500AA8E41 /* User */,
@@ -145,11 +147,12 @@
 			path = News;
 			sourceTree = "<group>";
 		};
-		84C0423825E1C5A600ED8E0C /* Buttoms */ = {
+		84C0423825E1C5A600ED8E0C /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				84487AA625E7050E00C77B36 /* LikeButton.swift */,
 			);
-			path = Buttoms;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +229,7 @@
 				84559AF425A0BF4200AA8E41 /* FriendsViewController.swift in Sources */,
 				84559AEE25A0BCB600AA8E41 /* GroupCell.swift in Sources */,
 				84C0423E25E1C5E800ED8E0C /* NewsViewCell.swift in Sources */,
+				84487AA725E7050E00C77B36 /* LikeButton.swift in Sources */,
 				844AAA7A25A12B51009BB6BC /* CustomImageView.swift in Sources */,
 				84C0423525E18F4D00ED8E0C /* Contact.swift in Sources */,
 				844DC74C259D28A0007AC6F3 /* AppDelegate.swift in Sources */,
