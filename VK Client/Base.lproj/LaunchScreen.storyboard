@@ -16,9 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="07c-bY-lr5">
+                                <rect key="frame" x="90" y="336" width="234" height="234"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="07c-bY-lr5" secondAttribute="height" multiplier="1:1" id="FQn-E5-kAq"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK Client by Evgenii Ratkov" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4e-oP-Kca">
-                                <rect key="frame" x="10" y="399.5" width="394" height="107.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <rect key="frame" x="10" y="782" width="394" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -27,18 +34,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="P4e-oP-Kca" secondAttribute="trailing" constant="10" id="ApH-rs-rzY"/>
+                            <constraint firstItem="1Ga-fr-1PI" firstAttribute="bottom" secondItem="P4e-oP-Kca" secondAttribute="bottom" constant="50" id="KNI-Bo-2Jw"/>
                             <constraint firstItem="P4e-oP-Kca" firstAttribute="leading" secondItem="zBV-n7-OoE" secondAttribute="leading" constant="10" id="Ojs-gw-bzn"/>
-                            <constraint firstItem="P4e-oP-Kca" firstAttribute="centerY" secondItem="1Ga-fr-1PI" secondAttribute="centerY" id="vE4-nX-Q6D"/>
-                            <constraint firstItem="P4e-oP-Kca" firstAttribute="centerX" secondItem="1Ga-fr-1PI" secondAttribute="centerX" id="w4d-8B-KQN"/>
+                            <constraint firstItem="07c-bY-lr5" firstAttribute="leading" secondItem="1Ga-fr-1PI" secondAttribute="leading" constant="90" id="pWe-FR-Izb"/>
+                            <constraint firstItem="07c-bY-lr5" firstAttribute="centerY" secondItem="1Ga-fr-1PI" secondAttribute="centerY" id="qSS-dH-roL"/>
+                            <constraint firstItem="1Ga-fr-1PI" firstAttribute="trailing" secondItem="07c-bY-lr5" secondAttribute="trailing" constant="90" id="sMK-ei-9Iw"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3J-Qc-5xR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="49"/>
+            <point key="canvasLocation" x="-271.01449275362319" y="48.883928571428569"/>
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="512" height="512"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

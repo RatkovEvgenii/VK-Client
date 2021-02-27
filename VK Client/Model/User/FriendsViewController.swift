@@ -28,12 +28,13 @@ class FriendsViewController: UITableViewController, UISearchBarDelegate {
     var filteredContacts: [Contact] = []
     
     override func viewDidLoad() {
-        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        self.view.addGestureRecognizer(hideKeyboardGesture)
+       
         super.viewDidLoad()
         filteredContacts = contacts
         searchBar.delegate = self
         configurateSectionsAndKeys()
+//        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+//        self.view.addGestureRecognizer(hideKeyboardGesture)
         
     }
     

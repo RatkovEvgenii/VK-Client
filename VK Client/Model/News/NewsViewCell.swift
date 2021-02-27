@@ -9,9 +9,16 @@ import UIKit
 
 class NewsViewCell: UITableViewCell {
 
+  
+    @IBOutlet weak var autorIcon: UIImageView!
+    @IBOutlet weak var autorName: UILabel!
+    @IBOutlet weak var newsPicture: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        autorIcon.layer.cornerRadius = autorIcon.frame.height / 2
+        autorIcon.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

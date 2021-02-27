@@ -7,10 +7,14 @@
 
 import UIKit
 
-class UserGroupViewController: UITableViewController {
-var groups = [String]()
+class UserGroupViewController: UITableViewController, UISearchBarDelegate {
+    @IBOutlet weak var searchBar: UISearchBar!
+    var groups = [String]()
+    var filteredGroups: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
+        filteredGroups = groups
 
        
     }
@@ -24,13 +28,13 @@ var groups = [String]()
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return filteredGroups.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupID", for: indexPath) as! GroupCell
-        let groupName = groups[indexPath.row]
+        let groupName = filteredGroups[indexPath.row]
 
         cell.groupName.text = groupName
         cell.groupIcon.image = UIImage(named: "groupIcon")
@@ -67,49 +71,27 @@ var groups = [String]()
         }
 
     }
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    // MARK: - Search bar settings
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredGroups = []
+
+        if searchText == "" {
+            filteredGroups = groups
+        } else {
+            for group in groups {
+                if group.lowercased().contains(searchText.lowercased()) {
+                    filteredGroups.append(group)
+                    
+                }
+            }
+        }
+        
+        self.tableView.reloadData()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    @objc func hideKeyboard() {
+        //self.searchBar.resignFirstResponder()
+        self.view.endEditing(true)
+        
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

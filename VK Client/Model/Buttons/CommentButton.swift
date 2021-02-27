@@ -27,11 +27,11 @@ import UIKit
     private func setupView() {
         let widthView = self.frame.width
         comentImage = UIImageView(frame: CGRect(x: 0, y: 2, width: widthView / 2, height: self.frame.height - 2))
-        comentImage?.image = UIImage(systemName: "buble.left")
-        comentImage?.tintColor = UIColor(named: "Labelcolor")
+        comentImage?.image = UIImage(systemName: "bubble.left")
+        comentImage?.tintColor = UIColor.label
         countLabel = UILabel(frame: CGRect(x: widthView / 2, y: 0, width: widthView / 2, height: self.frame.height))
         countLabel?.text = String(countOfComments)
-        countLabel?.textColor = UIColor(named: "Labelcolor")
+        countLabel?.textColor = UIColor.label
         countLabel?.textAlignment = .natural
         countLabel?.font = UIFont.systemFont(ofSize: 16)
         self.addSubview(comentImage!)
@@ -42,16 +42,12 @@ import UIKit
     
     @objc private func liked(_ sender: UIButton) {
         if isPressed {
-            comentImage?.tintColor = UIColor(named: "Labelcolor")
-            comentImage?.image = UIImage(systemName: "buble.left")
-            countLabel?.textColor = UIColor(named: "Labelcolor")
+            comentImage?.image = UIImage(systemName: "bubble.left")
             countLabel?.font = UIFont.systemFont(ofSize: 16)
             countOfComments -= 1
             isPressed = false
         } else {
-            comentImage?.tintColor = UIColor.red
-            comentImage?.image = UIImage(systemName: "buble.left.fill")
-            countLabel?.textColor = UIColor.red
+            comentImage?.image = UIImage(systemName: "bubble.left.fill")
             countLabel?.font = UIFont.boldSystemFont(ofSize: 16)
             countOfComments += 1
             isPressed = true

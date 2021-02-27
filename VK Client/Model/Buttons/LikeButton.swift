@@ -28,10 +28,11 @@ import UIKit
         let widthView = self.frame.width
         heartImage = UIImageView(frame: CGRect(x: 0, y: 2, width: widthView / 2, height: self.frame.height - 2))
         heartImage?.image = UIImage(systemName: "heart")
-        heartImage?.tintColor = UIColor(named: "Labelcolor")        
+      
+        heartImage?.tintColor = UIColor.label
         countLabel = UILabel(frame: CGRect(x: widthView / 2, y: 0, width: widthView / 2, height: self.frame.height))
         countLabel?.text = String(countOfLikes)
-        countLabel?.textColor = UIColor(named: "Labelcolor")
+        countLabel?.textColor = UIColor.label
         countLabel?.textAlignment = .natural
         countLabel?.font = UIFont.systemFont(ofSize: 16)
         self.addSubview(heartImage!)
@@ -42,9 +43,9 @@ import UIKit
     
     @objc private func liked(_ sender: UIButton) {
         if isPressed {
-            heartImage?.tintColor = UIColor(named: "Labelcolor")
+            heartImage?.tintColor = UIColor.label
             heartImage?.image = UIImage(systemName: "heart")
-            countLabel?.textColor = UIColor(named: "Labelcolor")
+            countLabel?.textColor = UIColor.label
             countLabel?.font = UIFont.systemFont(ofSize: 16)
             countOfLikes -= 1
             isPressed = false
