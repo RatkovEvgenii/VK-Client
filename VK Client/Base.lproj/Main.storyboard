@@ -293,6 +293,11 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uf9-Tf-ghx">
+                            <rect key="frame" x="0.0" y="611.5" width="414" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="news" id="BQD-p8-yr4" customClass="NewsViewCell" customModule="VK_Client" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="555.5"/>
@@ -331,9 +336,8 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fX8-jN-Gae" customClass="LikeButton" customModule="VK_Client" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="40"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXE-ts-cm5">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXE-ts-cm5" customClass="CommentButton" customModule="VK_Client" customModuleProvider="target">
                                                     <rect key="frame" x="83" y="0.0" width="82" height="40"/>
-                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-rK-Sun">
                                                     <rect key="frame" x="166" y="0.0" width="82" height="40"/>
@@ -515,9 +519,6 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

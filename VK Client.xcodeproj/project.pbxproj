@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		84487AA725E7050E00C77B36 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84487AA625E7050E00C77B36 /* LikeButton.swift */; };
+		8449984625EADF2100830EBD /* CommentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449984525EADF2100830EBD /* CommentButton.swift */; };
+		8449984925EADF3900830EBD /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449984825EADF3900830EBD /* ShareButton.swift */; };
+		8449984C25EADF9500830EBD /* CountOfViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449984B25EADF9500830EBD /* CountOfViews.swift */; };
 		844AAA7A25A12B51009BB6BC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844AAA7925A12B51009BB6BC /* CustomImageView.swift */; };
 		844DC74C259D28A0007AC6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC74B259D28A0007AC6F3 /* AppDelegate.swift */; };
 		844DC74E259D28A0007AC6F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC74D259D28A0007AC6F3 /* SceneDelegate.swift */; };
@@ -33,6 +36,9 @@
 
 /* Begin PBXFileReference section */
 		84487AA625E7050E00C77B36 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		8449984525EADF2100830EBD /* CommentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentButton.swift; sourceTree = "<group>"; };
+		8449984825EADF3900830EBD /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
+		8449984B25EADF9500830EBD /* CountOfViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountOfViews.swift; sourceTree = "<group>"; };
 		844AAA7925A12B51009BB6BC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		844DC748259D28A0007AC6F3 /* VK Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DC74B259D28A0007AC6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				84487AA625E7050E00C77B36 /* LikeButton.swift */,
+				8449984525EADF2100830EBD /* CommentButton.swift */,
+				8449984825EADF3900830EBD /* ShareButton.swift */,
+				8449984B25EADF9500830EBD /* CountOfViews.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -225,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8449984925EADF3900830EBD /* ShareButton.swift in Sources */,
 				84559AFE25A0C00E00AA8E41 /* AllGroupViewCell.swift in Sources */,
+				8449984625EADF2100830EBD /* CommentButton.swift in Sources */,
 				84559AF425A0BF4200AA8E41 /* FriendsViewController.swift in Sources */,
 				84559AEE25A0BCB600AA8E41 /* GroupCell.swift in Sources */,
 				84C0423E25E1C5E800ED8E0C /* NewsViewCell.swift in Sources */,
@@ -236,6 +247,7 @@
 				84559AE725A0B93E00AA8E41 /* BarViewController.swift in Sources */,
 				84559AF825A0BF8A00AA8E41 /* UserGroupViewController.swift in Sources */,
 				84559AEB25A0BCA100AA8E41 /* UserCell.swift in Sources */,
+				8449984C25EADF9500830EBD /* CountOfViews.swift in Sources */,
 				84CE66F4259FD8FA003DACF0 /* LoginFormController.swift in Sources */,
 				84CE66F8259FDAEF003DACF0 /* Login2.swift in Sources */,
 				844DC74E259D28A0007AC6F3 /* SceneDelegate.swift in Sources */,
