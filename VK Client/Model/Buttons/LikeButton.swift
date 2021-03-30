@@ -13,6 +13,7 @@ import UIKit
     private var countLabel: UILabel? = nil
     private var countOfLikes: Int = 99
     private var isPressed = false
+    private var hearColor = ""
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,19 +45,33 @@ import UIKit
     @objc private func liked(_ sender: UIButton) {
         if isPressed {
             heartImage?.tintColor = UIColor.label
-            heartImage?.image = UIImage(systemName: "heart")
+            hearColor = "heart"
+            
             countLabel?.textColor = UIColor.label
             countLabel?.font = UIFont.systemFont(ofSize: 16)
             countOfLikes -= 1
             isPressed = false
         } else {
             heartImage?.tintColor = UIColor.red
-            heartImage?.image = UIImage(systemName: "heart.fill")
+            hearColor = "heart.fill"
+            
             countLabel?.textColor = UIColor.red
             countLabel?.font = UIFont.boldSystemFont(ofSize: 16)
             countOfLikes += 1
             isPressed = true
         }
-        self.countLabel!.text = String(countOfLikes)
+        UIView.transition(with: countLabel!,
+                          duration: 0.25,
+                          options: .transitionFlipFromBottom,
+                          animations: { [self] in
+                            self.countLabel!.text = String(countOfLikes)
+
+                          })
+        UIView.transition(with: heartImage!,
+                          duration: 0.25,
+                          options: .transitionFlipFromBottom,
+                          animations: { [self] in
+                            self.heartImage?.image = UIImage(systemName: hearColor)
+                          })
     }
 }

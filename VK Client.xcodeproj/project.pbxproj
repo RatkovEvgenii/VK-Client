@@ -32,6 +32,7 @@
 		84C0423E25E1C5E800ED8E0C /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0423D25E1C5E800ED8E0C /* NewsViewCell.swift */; };
 		84CE66F4259FD8FA003DACF0 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */; };
 		84CE66F8259FDAEF003DACF0 /* Login2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE66F7259FDAEF003DACF0 /* Login2.swift */; };
+		AAC83E5125FA524C005938E0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC83E5025FA524C005938E0 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		84C0423D25E1C5E800ED8E0C /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		84CE66F7259FDAEF003DACF0 /* Login2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login2.swift; sourceTree = "<group>"; };
+		AAC83E5025FA524C005938E0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		84559AE925A0BC7800AA8E41 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AAC83E5425FAAA48005938E0 /* Loading */,
 				84C0423825E1C5A600ED8E0C /* Buttons */,
 				84C0423725E1C59900ED8E0C /* News */,
 				84559AF225A0BF0B00AA8E41 /* Group */,
@@ -162,6 +165,14 @@
 				8449984B25EADF9500830EBD /* CountOfViews.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		AAC83E5425FAAA48005938E0 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				AAC83E5025FA524C005938E0 /* LoadingView.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				84559AFB25A0BFC800AA8E41 /* AllGroupTableViewController.swift in Sources */,
 				8450C40325A24A50006D6B55 /* LikeButtom.swift in Sources */,
 				84559B0525A0C0EC00AA8E41 /* FriendCollectionViewCell.swift in Sources */,
+				AAC83E5125FA524C005938E0 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
