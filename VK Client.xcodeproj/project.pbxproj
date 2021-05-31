@@ -32,6 +32,7 @@
 		84C0423E25E1C5E800ED8E0C /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0423D25E1C5E800ED8E0C /* NewsViewCell.swift */; };
 		84CE66F4259FD8FA003DACF0 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */; };
 		84CE66F8259FDAEF003DACF0 /* Login2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE66F7259FDAEF003DACF0 /* Login2.swift */; };
+		AA56FBE126658752008DDB0C /* CustomImageViewWithSlideAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */; };
 		AAC83E5125FA524C005938E0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC83E5025FA524C005938E0 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		84C0423D25E1C5E800ED8E0C /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		84CE66F7259FDAEF003DACF0 /* Login2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login2.swift; sourceTree = "<group>"; };
+		AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewWithSlideAnimate.swift; sourceTree = "<group>"; };
 		AAC83E5025FA524C005938E0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				844DC74B259D28A0007AC6F3 /* AppDelegate.swift */,
 				844DC74D259D28A0007AC6F3 /* SceneDelegate.swift */,
 				844AAA7925A12B51009BB6BC /* CustomImageView.swift */,
+				AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */,
 				844DC751259D28A0007AC6F3 /* Main.storyboard */,
 				8450C40225A24A50006D6B55 /* LikeButtom.swift */,
 				84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */,
@@ -266,6 +269,7 @@
 				84559B0225A0C0D300AA8E41 /* FriendCollectionViewController.swift in Sources */,
 				84559AFB25A0BFC800AA8E41 /* AllGroupTableViewController.swift in Sources */,
 				8450C40325A24A50006D6B55 /* LikeButtom.swift in Sources */,
+				AA56FBE126658752008DDB0C /* CustomImageViewWithSlideAnimate.swift in Sources */,
 				84559B0525A0C0EC00AA8E41 /* FriendCollectionViewCell.swift in Sources */,
 				AAC83E5125FA524C005938E0 /* LoadingView.swift in Sources */,
 			);

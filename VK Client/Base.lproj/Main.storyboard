@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="axq-lQ-Ww4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -20,7 +20,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKp-PI-LVL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="oMN-lw-Iks">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk-alpha" translatesAutoresizingMaskIntoConstraints="NO" id="oMN-lw-Iks">
                                         <rect key="frame" x="132" y="100" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Wc9-4g-aEG"/>
@@ -103,9 +103,8 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECF-2r-yZW" customClass="CustomImageView" customModule="VK_Client" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECF-2r-yZW" customClass="CustomImageViewWithSlideAnimate" customModule="VK_Client" customModuleProvider="target">
                                 <rect key="frame" x="74" y="93" width="252" height="201"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhE-y9-BfA" customClass="LoadingView" customModule="VK_Client" customModuleProvider="target">
                                 <rect key="frame" x="69" y="414" width="277" height="54"/>
@@ -336,14 +335,14 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="news" id="BQD-p8-yr4" customClass="NewsViewCell" customModule="VK_Client" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="550.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="552"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BQD-p8-yr4" id="8Ps-x7-qMJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="550.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="552"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qlg-gq-G9Q">
-                                            <rect key="frame" x="10" y="10" width="60" height="60.5"/>
+                                            <rect key="frame" x="10" y="10" width="60" height="60"/>
                                             <color key="backgroundColor" systemColor="systemTealColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="90y-eX-eia"/>
@@ -359,56 +358,59 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CUI-fh-yzr">
-                                            <rect key="frame" x="0.0" y="80.5" width="414" height="414"/>
-                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-yf-zFd" customClass="CustomImageViewWithSlideAnimate" customModule="VK_Client" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="80" width="414" height="414"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="CUI-fh-yzr" secondAttribute="height" multiplier="1:1" id="AN9-j3-6SH"/>
+                                                <constraint firstAttribute="width" secondItem="z8g-yf-zFd" secondAttribute="height" multiplier="1:1" id="p4V-lm-JG1"/>
                                             </constraints>
-                                        </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="zZP-hT-jQO">
-                                            <rect key="frame" x="0.0" y="504.5" width="414" height="35"/>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5at-zF-dUI">
+                                            <rect key="frame" x="0.0" y="504" width="414" height="38"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fX8-jN-Gae" customClass="LikeButton" customModule="VK_Client" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="35"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-eE-wdP" customClass="LikeButton" customModule="VK_Client" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="38"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXE-ts-cm5" customClass="CommentButton" customModule="VK_Client" customModuleProvider="target">
-                                                    <rect key="frame" x="83" y="0.0" width="82" height="35"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-SR-pOa" customClass="CommentButton" customModule="VK_Client" customModuleProvider="target">
+                                                    <rect key="frame" x="83" y="0.0" width="82.5" height="38"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-rK-Sun" customClass="ShareButton" customModule="VK_Client" customModuleProvider="target">
-                                                    <rect key="frame" x="166" y="0.0" width="82" height="35"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNG-h4-N2b" customClass="ShareButton" customModule="VK_Client" customModuleProvider="target">
+                                                    <rect key="frame" x="165.5" y="0.0" width="83" height="38"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZG4-2F-naz">
-                                                    <rect key="frame" x="249" y="0.0" width="82" height="35"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-0Q-ral">
+                                                    <rect key="frame" x="248.5" y="0.0" width="82.5" height="38"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8j-mC-YVl" customClass="CountOfViews" customModule="VK_Client" customModuleProvider="target">
-                                                    <rect key="frame" x="332" y="0.0" width="82" height="35"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rY-RG-9n5" customClass="CountOfViews" customModule="VK_Client" customModuleProvider="target">
+                                                    <rect key="frame" x="331" y="0.0" width="83" height="38"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="Mce-6f-bZu"/>
+                                                <constraint firstAttribute="width" secondItem="5at-zF-dUI" secondAttribute="height" multiplier="11:1" id="0yt-Xi-UWp"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="qlg-gq-G9Q" firstAttribute="leading" secondItem="8Ps-x7-qMJ" secondAttribute="leading" constant="10" id="1hS-6W-gc3"/>
                                         <constraint firstItem="4uu-3d-smy" firstAttribute="top" secondItem="8Ps-x7-qMJ" secondAttribute="top" constant="10" id="2De-9a-eY9"/>
-                                        <constraint firstItem="CUI-fh-yzr" firstAttribute="leading" secondItem="8Ps-x7-qMJ" secondAttribute="leading" id="6Eb-kj-AIs"/>
+                                        <constraint firstItem="z8g-yf-zFd" firstAttribute="leading" secondItem="8Ps-x7-qMJ" secondAttribute="leading" id="3e2-JS-8bG"/>
                                         <constraint firstItem="4uu-3d-smy" firstAttribute="leading" secondItem="qlg-gq-G9Q" secondAttribute="trailing" constant="10" id="8ZT-rj-vli"/>
-                                        <constraint firstItem="zZP-hT-jQO" firstAttribute="leading" secondItem="8Ps-x7-qMJ" secondAttribute="leading" id="9qK-aZ-kJu"/>
+                                        <constraint firstItem="5at-zF-dUI" firstAttribute="top" secondItem="z8g-yf-zFd" secondAttribute="bottom" constant="10" id="BpU-1T-jPz"/>
                                         <constraint firstItem="qlg-gq-G9Q" firstAttribute="top" secondItem="8Ps-x7-qMJ" secondAttribute="top" constant="10" id="Yyp-L5-dHg"/>
-                                        <constraint firstAttribute="trailing" secondItem="CUI-fh-yzr" secondAttribute="trailing" id="aQh-Zn-KPD"/>
+                                        <constraint firstAttribute="bottom" secondItem="5at-zF-dUI" secondAttribute="bottom" constant="10" id="eX7-tR-pvP"/>
                                         <constraint firstAttribute="trailing" secondItem="4uu-3d-smy" secondAttribute="trailing" constant="10" id="h7P-Si-mdd"/>
-                                        <constraint firstAttribute="trailing" secondItem="zZP-hT-jQO" secondAttribute="trailing" id="lDa-Rl-uML"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="zZP-hT-jQO" secondAttribute="bottom" id="rN6-9L-bPq"/>
-                                        <constraint firstItem="zZP-hT-jQO" firstAttribute="top" secondItem="CUI-fh-yzr" secondAttribute="bottom" constant="10" id="ttK-5r-RoQ"/>
-                                        <constraint firstItem="CUI-fh-yzr" firstAttribute="top" secondItem="qlg-gq-G9Q" secondAttribute="bottom" constant="10" id="vSt-uM-fkU"/>
+                                        <constraint firstItem="z8g-yf-zFd" firstAttribute="top" secondItem="qlg-gq-G9Q" secondAttribute="bottom" constant="10" id="mrP-Ib-Bef"/>
+                                        <constraint firstAttribute="trailing" secondItem="z8g-yf-zFd" secondAttribute="trailing" id="sMd-CC-kdZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="5at-zF-dUI" secondAttribute="trailing" id="t14-bL-Qv9"/>
+                                        <constraint firstItem="5at-zF-dUI" firstAttribute="leading" secondItem="8Ps-x7-qMJ" secondAttribute="leading" id="uoP-Dw-c44"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="autorIcon" destination="qlg-gq-G9Q" id="3Vn-iw-1Yo"/>
                                     <outlet property="autorName" destination="4uu-3d-smy" id="FuU-UN-vVA"/>
-                                    <outlet property="newsPicture" destination="CUI-fh-yzr" id="UyZ-6z-ka0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -421,7 +423,7 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9E-xe-16s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3047.826086956522" y="1285.0446428571429"/>
+            <point key="canvasLocation" x="3044.9275362318845" y="1363.3928571428571"/>
         </scene>
         <!--User Group View Controller-->
         <scene sceneID="2yw-IZ-TLQ">
@@ -563,11 +565,11 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="512" height="512"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.fill.text.grid.1x2" catalog="system" width="128" height="100"/>
+        <image name="vk-alpha" width="324" height="324"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

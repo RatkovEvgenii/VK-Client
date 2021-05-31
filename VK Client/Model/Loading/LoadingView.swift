@@ -50,7 +50,7 @@ class LoadingView: UIView {
     
     func startAnimation() {
         UIView.animateKeyframes(withDuration: 0.8, delay: 0, options: .repeat, animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5) {
                 self.view1?.backgroundColor = .gray
                 self.view3?.backgroundColor = .darkGray
                 self.view5?.backgroundColor = .lightGray

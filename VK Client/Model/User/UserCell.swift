@@ -10,6 +10,7 @@ import UIKit
 class UserCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
   //  @IBOutlet weak var userAvatar: UIImageView!
+    //@IBOutlet weak var userAvatar: CustomImageView!
     @IBOutlet weak var userAvatar: CustomImageView!
     
     override func awakeFromNib() {

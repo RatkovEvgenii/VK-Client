@@ -12,7 +12,7 @@ class NewsViewCell: UITableViewCell {
   
     @IBOutlet weak var autorIcon: CustomImageView!
     @IBOutlet weak var autorName: UILabel!
-    @IBOutlet weak var newsPicture: UIImageView!
+    
     
     
     override func awakeFromNib() {
