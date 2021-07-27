@@ -78,15 +78,31 @@ class CustomImageView: UIView {
 //            animation.fillMode = CAMediaTimingFillMode.backwards
 //
 //            self.layer.add(animation, forKey: nil)
-        UIView.animate(withDuration: 0.125,
-            animations: {
-                self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-            },
-            completion: { _ in
-                UIView.animate(withDuration: 0.125) {
-                    self.transform = CGAffineTransform.identity
-                }
-            })
+        
+        //сжимание
+//        UIView.animate(withDuration: 0.125,
+//            animations: {
+//                self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+//            },
+//            completion: { _ in
+//                UIView.animate(withDuration: 0.125) {
+//                    self.transform = CGAffineTransform.identity
+//                }
+//            })
+        UIView.animateKeyframes(withDuration: 2,
+                                delay: 0,
+                                options: [],
+                                animations: {
+                                    UIView.addKeyframe(withRelativeStartTime: 0,
+                                                       relativeDuration: 0.5,
+                                                       animations: {
+                                                        self.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
+                                                       })
+                                 
+                                },
+                                completion: nil)
+
+        
 
     }
     

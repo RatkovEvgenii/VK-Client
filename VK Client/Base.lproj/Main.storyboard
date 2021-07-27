@@ -98,36 +98,22 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
         <!--View Controller-->
         <scene sceneID="au5-Ql-RZ4">
             <objects>
-                <viewController id="axq-lQ-Ww4" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="axq-lQ-Ww4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ud-8X-mVt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECF-2r-yZW" customClass="CustomImageViewWithSlideAnimate" customModule="VK_Client" customModuleProvider="target">
-                                <rect key="frame" x="74" y="93" width="252" height="201"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhE-y9-BfA" customClass="LoadingView" customModule="VK_Client" customModuleProvider="target">
-                                <rect key="frame" x="69" y="414" width="277" height="54"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="408"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZV6-KJ-caV"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="ZV6-KJ-caV" firstAttribute="trailing" secondItem="ECF-2r-yZW" secondAttribute="trailing" constant="88" id="0T8-pJ-2b6"/>
-                            <constraint firstItem="hhE-y9-BfA" firstAttribute="centerY" secondItem="ZV6-KJ-caV" secondAttribute="centerY" id="0l5-xe-72u"/>
-                            <constraint firstItem="ZV6-KJ-caV" firstAttribute="bottom" secondItem="hhE-y9-BfA" secondAttribute="bottom" constant="380" id="4dN-ms-CzR"/>
-                            <constraint firstItem="ZV6-KJ-caV" firstAttribute="bottom" secondItem="hhE-y9-BfA" secondAttribute="bottom" constant="394" id="50h-v0-UJL"/>
-                            <constraint firstItem="hhE-y9-BfA" firstAttribute="centerX" secondItem="ZV6-KJ-caV" secondAttribute="centerX" id="8fE-vx-tzN"/>
-                            <constraint firstItem="ECF-2r-yZW" firstAttribute="top" secondItem="ZV6-KJ-caV" secondAttribute="top" constant="49" id="Fvz-V7-J3t"/>
-                            <constraint firstItem="ECF-2r-yZW" firstAttribute="leading" secondItem="ZV6-KJ-caV" secondAttribute="leading" constant="74" id="JZP-0K-adU"/>
-                            <constraint firstItem="hhE-y9-BfA" firstAttribute="leading" secondItem="ZV6-KJ-caV" secondAttribute="leading" constant="76" id="Lmc-bg-RRK"/>
-                            <constraint firstItem="ZV6-KJ-caV" firstAttribute="trailing" secondItem="hhE-y9-BfA" secondAttribute="trailing" constant="75" id="OAc-dv-51s"/>
-                            <constraint firstItem="hhE-y9-BfA" firstAttribute="top" secondItem="ZV6-KJ-caV" secondAttribute="top" constant="370" id="RK0-uF-cbJ"/>
-                            <constraint firstItem="hhE-y9-BfA" firstAttribute="top" secondItem="ECF-2r-yZW" secondAttribute="bottom" constant="106" id="fCK-xf-VUe"/>
-                            <constraint firstItem="ZV6-KJ-caV" firstAttribute="trailing" secondItem="hhE-y9-BfA" secondAttribute="trailing" constant="68" id="hf8-Lx-759"/>
-                            <constraint firstItem="hhE-y9-BfA" firstAttribute="top" secondItem="ECF-2r-yZW" secondAttribute="bottom" constant="120" id="m7Z-aH-LXK"/>
-                            <constraint firstItem="hhE-y9-BfA" firstAttribute="leading" secondItem="ZV6-KJ-caV" secondAttribute="leading" constant="69" id="xkE-lc-vJJ"/>
+                            <constraint firstItem="ZV6-KJ-caV" firstAttribute="trailing" secondItem="ECF-2r-yZW" secondAttribute="trailing" id="J7v-go-oyl"/>
+                            <constraint firstItem="ECF-2r-yZW" firstAttribute="top" secondItem="ZV6-KJ-caV" secondAttribute="top" constant="10" id="Moz-IK-uDd"/>
+                            <constraint firstItem="ZV6-KJ-caV" firstAttribute="bottom" secondItem="ECF-2r-yZW" secondAttribute="bottom" constant="400" id="TVP-rZ-Q1k"/>
+                            <constraint firstItem="ECF-2r-yZW" firstAttribute="leading" secondItem="ZV6-KJ-caV" secondAttribute="leading" id="oNF-bm-UJf"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -158,7 +144,7 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
         <!--Друзья-->
         <scene sceneID="Kcg-Ej-a1M">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vrf-fK-6Dh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vrf-fK-6Dh" customClass="CustomNavigationController" customModule="VK_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Друзья" image="person.3.fill" catalog="system" id="M6u-F4-KOT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IDy-je-4Rh">
@@ -309,7 +295,7 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
         <!--Сообщества-->
         <scene sceneID="sxg-8w-XzH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lPx-f9-62W" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lPx-f9-62W" customClass="CustomNavigationController" customModule="VK_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Сообщества" image="square.fill.text.grid.1x2" catalog="system" id="Idl-Zd-Z0Q"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5KZ-FO-TgD">
@@ -423,7 +409,7 @@ FkVtYWlsINC40LvQuCDRgtC10LvQtdGE0L7QvQ
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9E-xe-16s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3044.9275362318845" y="1363.3928571428571"/>
+            <point key="canvasLocation" x="2984" y="1363"/>
         </scene>
         <!--User Group View Controller-->
         <scene sceneID="2yw-IZ-TLQ">
