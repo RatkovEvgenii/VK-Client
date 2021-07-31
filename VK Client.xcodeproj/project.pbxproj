@@ -33,6 +33,8 @@
 		84CE66F4259FD8FA003DACF0 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */; };
 		84CE66F8259FDAEF003DACF0 /* Login2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE66F7259FDAEF003DACF0 /* Login2.swift */; };
 		AA56FBE126658752008DDB0C /* CustomImageViewWithSlideAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */; };
+		AAC726C026B5C8480083B4B9 /* SessionSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC726BF26B5C8480083B4B9 /* SessionSingleton.swift */; };
+		AAC726CC26B5DAEE0083B4B9 /* WebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC726CB26B5DAEE0083B4B9 /* WebLoginViewController.swift */; };
 		AAC83E5125FA524C005938E0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC83E5025FA524C005938E0 /* LoadingView.swift */; };
 		AAD9F86F26B02BEF00060E33 /* CustomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9F86E26B02BEF00060E33 /* CustomPushAnimator.swift */; };
 		AAD9F87326B02C0C00060E33 /* CustomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9F87226B02C0C00060E33 /* CustomPopAnimator.swift */; };
@@ -69,6 +71,8 @@
 		84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		84CE66F7259FDAEF003DACF0 /* Login2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login2.swift; sourceTree = "<group>"; };
 		AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewWithSlideAnimate.swift; sourceTree = "<group>"; };
+		AAC726BF26B5C8480083B4B9 /* SessionSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSingleton.swift; sourceTree = "<group>"; };
+		AAC726CB26B5DAEE0083B4B9 /* WebLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLoginViewController.swift; sourceTree = "<group>"; };
 		AAC83E5025FA524C005938E0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AAD9F86E26B02BEF00060E33 /* CustomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushAnimator.swift; sourceTree = "<group>"; };
 		AAD9F87226B02C0C00060E33 /* CustomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopAnimator.swift; sourceTree = "<group>"; };
@@ -113,7 +117,9 @@
 				844AAA7925A12B51009BB6BC /* CustomImageView.swift */,
 				AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */,
 				844DC751259D28A0007AC6F3 /* Main.storyboard */,
+				AAC726CB26B5DAEE0083B4B9 /* WebLoginViewController.swift */,
 				8450C40225A24A50006D6B55 /* LikeButtom.swift */,
+				AAC726BF26B5C8480083B4B9 /* SessionSingleton.swift */,
 				84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */,
 				844DC754259D28A1007AC6F3 /* Assets.xcassets */,
 				844DC756259D28A1007AC6F3 /* LaunchScreen.storyboard */,
@@ -275,6 +281,7 @@
 				84559AEE25A0BCB600AA8E41 /* GroupCell.swift in Sources */,
 				84C0423E25E1C5E800ED8E0C /* NewsViewCell.swift in Sources */,
 				84487AA725E7050E00C77B36 /* LikeButton.swift in Sources */,
+				AAC726C026B5C8480083B4B9 /* SessionSingleton.swift in Sources */,
 				844AAA7A25A12B51009BB6BC /* CustomImageView.swift in Sources */,
 				84C0423525E18F4D00ED8E0C /* Contact.swift in Sources */,
 				844DC74C259D28A0007AC6F3 /* AppDelegate.swift in Sources */,
@@ -282,6 +289,7 @@
 				84559AF825A0BF8A00AA8E41 /* UserGroupViewController.swift in Sources */,
 				AAD9F87626B02C2C00060E33 /* CustomNavigationController.swift in Sources */,
 				84559AEB25A0BCA100AA8E41 /* UserCell.swift in Sources */,
+				AAC726CC26B5DAEE0083B4B9 /* WebLoginViewController.swift in Sources */,
 				8449984C25EADF9500830EBD /* CountOfViews.swift in Sources */,
 				84CE66F4259FD8FA003DACF0 /* LoginFormController.swift in Sources */,
 				AAD9F87926B02C4700060E33 /* CustomInteractiveTransition.swift in Sources */,
