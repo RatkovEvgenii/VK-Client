@@ -10,7 +10,7 @@ import WebKit
 
 
 class WebLoginViewController: UIViewController {
-    
+    private var requestToAPI: RequestToAPI = RequestToAPI()
     @IBOutlet weak var webview: WKWebView! {
         didSet{
             webview.navigationDelegate = self
@@ -31,6 +31,7 @@ class WebLoginViewController: UIViewController {
             let request = URLRequest(url: urlComponents.url!)
             
             webview.load(request)
+            
         }
     }
     
@@ -61,9 +62,19 @@ extension WebLoginViewController: WKNavigationDelegate {
         }
         
         let token = params["access_token"]
-        Session.instance.token = token ?? ""
-        print(token)
+        let userID = Int(params["user_id"] ?? "0")
         
+        Session.instance.token = token ?? ""
+        Session.instance.userID = userID ?? 0
+        print("token = ", token)
+        print("userID = ", userID)
+        print("получили токен и айди")
+        
+//        requestToAPI.getResult(metod: "friends.get", params: "user_ids")
+//        requestToAPI.getResult(metod: "photos.getAll", params: "user_ids")
+//        requestToAPI!.getResult(metod: "groups.get", params: "user_ids", paramsValue: String(Session.instance.userID))
+        requestToAPI.getResult(metod: "groups.search", params: "q", paramsValue: "КБ")
+
         
         decisionHandler(.cancel)
     }
