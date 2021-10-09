@@ -17,8 +17,8 @@ class NewsViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        autorIcon.layer.cornerRadius = autorIcon.frame.height / 2
-//        autorIcon.layer.masksToBounds = true
+        autorIcon.layer.cornerRadius = autorIcon.frame.height / 2
+        autorIcon.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
