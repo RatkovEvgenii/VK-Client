@@ -66,16 +66,24 @@ extension WebLoginViewController: WKNavigationDelegate {
         
         Session.instance.token = token ?? ""
         Session.instance.userID = userID ?? 0
-        print("token = ", token)
-        print("userID = ", userID)
+       
         print("получили токен и айди")
         
-//        requestToAPI.getResult(metod: "friends.get", params: "user_ids")
-//        requestToAPI.getResult(metod: "photos.getAll", params: "user_ids")
-//        requestToAPI!.getResult(metod: "groups.get", params: "user_ids", paramsValue: String(Session.instance.userID))
-        requestToAPI.getResult(metod: "groups.search", params: "q", paramsValue: "КБ")
+        
 
         
         decisionHandler(.cancel)
+//        if let newViewController = storyboard?.instantiateViewController(withIdentifier: "BarViewController") as? BarViewController {
+//            newViewController.modalTransitionStyle = .crossDissolve // это значение можно менять для разных видов анимации появления
+//            newViewController.modalPresentationStyle = .overCurrentContext // это та самая волшебная строка, убрав или закомментировав ее, вы получите появление смахиваемого контроллера
+//            present(newViewController, animated: false, completion: nil)
+//           }
+        
+        if let newViewController = storyboard?.instantiateViewController(withIdentifier: "TestViewController") as? TestViewController {
+            newViewController.modalTransitionStyle = .crossDissolve // это значение можно менять для разных видов анимации появления
+            newViewController.modalPresentationStyle = .overCurrentContext // это та самая волшебная строка, убрав или закомментировав ее, вы получите появление смахиваемого контроллера
+            present(newViewController, animated: false, completion: nil)
+           }
+        
     }
 }
