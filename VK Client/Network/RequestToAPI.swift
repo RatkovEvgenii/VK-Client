@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import RealmSwift
 
 class RequestToAPI {
-
+    var urlRequest: URL? = nil
     var request: URLRequest? = nil
-   
-    func getResult(url: URL) {
+    
+    func setURL (url: URL) {
+        urlRequest = url
+    }
+    //
+    func getResult(handler: @escaping (([Friend]) -> Void)) {
 //        var urlComponents = URLComponents()
 //        urlComponents.scheme = "https"
 //        urlComponents.host = "api.vk.com"
@@ -23,19 +28,69 @@ class RequestToAPI {
 //        ]
 //        request = URLRequest(url: urlComponents.url!)
 //
-        request = URLRequest(url: url)
+        request = URLRequest(url: urlRequest!)
         let session = URLSession.shared
         
         // задача для запуска
-        let task = session.dataTask(with: request!) { (data, response, error) in
-            // в замыкании данные, полученные от сервера, мы преобразуем в json
-            let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-            // выводим в консоль
-           print(json)
+//        let task = session.dataTask(with: request!) { (data, response, error) in
+//            // в замыкании данные, полученные от сервера, мы преобразуем в json
+//            let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+//            // выводим в консоль
+//           print(json)
+//        }
+        
+        URLSession.shared.dataTask(with: request!) { (data, response, error) in
+            if data != nil && error == nil {
+                let apiResponse = try? JSONDecoder().decode(NetworkResponce.self, from: data!)
+                if apiResponse != nil {
+                    let response = apiResponse?.response
+                    let items = response?.items
+                    
+                    //print(items!.count)
+                    DispatchQueue.main.async{
+                        self.saveFriendData(items!)
+                        
+                    }
+                    handler(items!)
+                } else {
+                    print("json parse error")
+                }
+            } else {
+                print("network error")
+            }
         }
         // запускаем задачу
-        task.resume()
+        .resume()
     }
+    
+    func getImage(by urlStr: String, handler: @escaping ((Data?) -> Void))  {
+        guard  let url = URL(string: urlStr) else {return}
+        
+        if let data = try? Data(contentsOf: url) {
+            handler(data)
+        }
+    }
+    //сохранение погодных данных в Realm
+        func saveFriendData(_ friends: [Friend]) {
+    // обработка исключений при работе с хранилищем
+            do {
+    // получаем доступ к хранилищу
+                let realm = try Realm()
+                
+    // начинаем изменять хранилище
+                realm.beginWrite()
+                
+    // кладем все объекты класса погоды в хранилище
+                realm.add(friends)
+                
+    // завершаем изменения хранилища
+                try realm.commitWrite()
+            } catch {
+    // если произошла ошибка, выводим ее в консоль
+                print(error)
+            }
+        }
+
 }
 // 
 //        requestToAPI.getResult(metod: "photos.getAll", params: "user_ids", paramsValue: String(Session.instance.userID))

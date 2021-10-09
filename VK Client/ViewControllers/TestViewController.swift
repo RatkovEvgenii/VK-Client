@@ -9,11 +9,16 @@ import UIKit
 
 class TestViewController: UIViewController {
     var requestToAPI = RequestToAPI()
+    var friend: [Friend] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        requestToAPI.getResult(url: setURL())
+        requestToAPI.setURL(url: setURL())
+        requestToAPI.getResult(handler: { [self] items in
+            self.friend = items
+            
+            
+        })
         // Do any additional setup after loading the view.
     }
     

@@ -73,17 +73,17 @@ extension WebLoginViewController: WKNavigationDelegate {
 
         
         decisionHandler(.cancel)
-//        if let newViewController = storyboard?.instantiateViewController(withIdentifier: "BarViewController") as? BarViewController {
-//            newViewController.modalTransitionStyle = .crossDissolve // это значение можно менять для разных видов анимации появления
-//            newViewController.modalPresentationStyle = .overCurrentContext // это та самая волшебная строка, убрав или закомментировав ее, вы получите появление смахиваемого контроллера
-//            present(newViewController, animated: false, completion: nil)
-//           }
-        
-        if let newViewController = storyboard?.instantiateViewController(withIdentifier: "TestViewController") as? TestViewController {
+        if let newViewController = storyboard?.instantiateViewController(withIdentifier: "BarViewController") as? BarViewController {
             newViewController.modalTransitionStyle = .crossDissolve // это значение можно менять для разных видов анимации появления
             newViewController.modalPresentationStyle = .overCurrentContext // это та самая волшебная строка, убрав или закомментировав ее, вы получите появление смахиваемого контроллера
             present(newViewController, animated: false, completion: nil)
            }
+        
+//        if let newViewController = storyboard?.instantiateViewController(withIdentifier: "TestViewController") as? TestViewController {
+//            newViewController.modalTransitionStyle = .crossDissolve // это значение можно менять для разных видов анимации появления
+//            newViewController.modalPresentationStyle = .overCurrentContext // это та самая волшебная строка, убрав или закомментировав ее, вы получите появление смахиваемого контроллера
+//            present(newViewController, animated: false, completion: nil)
+//           }
         
     }
 }

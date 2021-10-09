@@ -38,6 +38,9 @@
 		AA0102C627038E3B006CE9A2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0102C527038E3B006CE9A2 /* Group.swift */; };
 		AA01037C27122920006CE9A2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01037B27122920006CE9A2 /* TestViewController.swift */; };
 		AA56FBE126658752008DDB0C /* CustomImageViewWithSlideAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */; };
+		AA7ECA7927123FF500349B73 /* NetworkFriendResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7ECA7827123FF500349B73 /* NetworkFriendResponce.swift */; };
+		AA7ECA822712415E00349B73 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7ECA812712415E00349B73 /* Friend.swift */; };
+		AA7ECA882712440400349B73 /* NetworkResponce .swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7ECA872712440400349B73 /* NetworkResponce .swift */; };
 		AAC726C026B5C8480083B4B9 /* SessionSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC726BF26B5C8480083B4B9 /* SessionSingleton.swift */; };
 		AAC726CC26B5DAEE0083B4B9 /* WebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC726CB26B5DAEE0083B4B9 /* WebLoginViewController.swift */; };
 		AAC83E5125FA524C005938E0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC83E5025FA524C005938E0 /* LoadingView.swift */; };
@@ -83,6 +86,9 @@
 		AA0102C527038E3B006CE9A2 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AA01037B27122920006CE9A2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewWithSlideAnimate.swift; sourceTree = "<group>"; };
+		AA7ECA7827123FF500349B73 /* NetworkFriendResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFriendResponce.swift; sourceTree = "<group>"; };
+		AA7ECA812712415E00349B73 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		AA7ECA872712440400349B73 /* NetworkResponce .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkResponce .swift"; sourceTree = "<group>"; };
 		AAC726BF26B5C8480083B4B9 /* SessionSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSingleton.swift; sourceTree = "<group>"; };
 		AAC726CB26B5DAEE0083B4B9 /* WebLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLoginViewController.swift; sourceTree = "<group>"; };
 		AAC83E5025FA524C005938E0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -137,11 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				AA01038327123226006CE9A2 /* CustomViews */,
-				AA01038027123209006CE9A2 /* OtherStuff */,
 				AA01037F271231F1006CE9A2 /* ViewControllers */,
 				AA01037E271231D4006CE9A2 /* Network */,
 				84559AE925A0BC7800AA8E41 /* Model */,
 				AAD9F86D26B02B7A00060E33 /* CustomAnimateTransitioning */,
+				AA01038027123209006CE9A2 /* OtherStuff */,
 				844DC759259D28A1007AC6F3 /* Info.plist */,
 			);
 			path = "VK Client";
@@ -151,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				AA0102BE27038DED006CE9A2 /* DataModels */,
-				AAC83E5425FAAA48005938E0 /* Loading */,
 				84C0423825E1C5A600ED8E0C /* Buttons */,
 				84C0423725E1C59900ED8E0C /* News */,
 				84559AF225A0BF0B00AA8E41 /* Group */,
@@ -217,6 +222,9 @@
 				AA0102BF27038DFF006CE9A2 /* User.swift */,
 				AA0102C227038E16006CE9A2 /* Photo.swift */,
 				AA0102C527038E3B006CE9A2 /* Group.swift */,
+				AA7ECA872712440400349B73 /* NetworkResponce .swift */,
+				AA7ECA7827123FF500349B73 /* NetworkFriendResponce.swift */,
+				AA7ECA812712415E00349B73 /* Friend.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -225,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				AA01029F26FCF5A9006CE9A2 /* RequestToAPI.swift */,
-				AA01037B27122920006CE9A2 /* TestViewController.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 				84CE66F3259FD8FA003DACF0 /* LoginFormController.swift */,
 				84559AE625A0B93E00AA8E41 /* BarViewController.swift */,
 				AAC726CB26B5DAEE0083B4B9 /* WebLoginViewController.swift */,
+				AA01037B27122920006CE9A2 /* TestViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,16 +268,9 @@
 				844AAA7925A12B51009BB6BC /* CustomImageView.swift */,
 				AA56FBE026658752008DDB0C /* CustomImageViewWithSlideAnimate.swift */,
 				8450C40225A24A50006D6B55 /* LikeButtom.swift */,
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		AAC83E5425FAAA48005938E0 /* Loading */ = {
-			isa = PBXGroup;
-			children = (
 				AAC83E5025FA524C005938E0 /* LoadingView.swift */,
 			);
-			path = Loading;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		AAD9F86D26B02B7A00060E33 /* CustomAnimateTransitioning */ = {
@@ -410,6 +411,7 @@
 				AAC726C026B5C8480083B4B9 /* SessionSingleton.swift in Sources */,
 				844AAA7A25A12B51009BB6BC /* CustomImageView.swift in Sources */,
 				84C0423525E18F4D00ED8E0C /* Contact.swift in Sources */,
+				AA7ECA7927123FF500349B73 /* NetworkFriendResponce.swift in Sources */,
 				844DC74C259D28A0007AC6F3 /* AppDelegate.swift in Sources */,
 				84559AE725A0B93E00AA8E41 /* BarViewController.swift in Sources */,
 				84559AF825A0BF8A00AA8E41 /* UserGroupViewController.swift in Sources */,
@@ -419,6 +421,7 @@
 				8449984C25EADF9500830EBD /* CountOfViews.swift in Sources */,
 				AA0102C327038E16006CE9A2 /* Photo.swift in Sources */,
 				84CE66F4259FD8FA003DACF0 /* LoginFormController.swift in Sources */,
+				AA7ECA822712415E00349B73 /* Friend.swift in Sources */,
 				AA0102A026FCF5A9006CE9A2 /* RequestToAPI.swift in Sources */,
 				AAD9F87926B02C4700060E33 /* CustomInteractiveTransition.swift in Sources */,
 				84CE66F8259FDAEF003DACF0 /* Login2.swift in Sources */,
@@ -427,6 +430,7 @@
 				84C0423A25E1C5D600ED8E0C /* NewsViewController.swift in Sources */,
 				AAD9F86F26B02BEF00060E33 /* CustomPushAnimator.swift in Sources */,
 				84559B0225A0C0D300AA8E41 /* FriendCollectionViewController.swift in Sources */,
+				AA7ECA882712440400349B73 /* NetworkResponce .swift in Sources */,
 				84559AFB25A0BFC800AA8E41 /* AllGroupTableViewController.swift in Sources */,
 				8450C40325A24A50006D6B55 /* LikeButtom.swift in Sources */,
 				AA56FBE126658752008DDB0C /* CustomImageViewWithSlideAnimate.swift in Sources */,
