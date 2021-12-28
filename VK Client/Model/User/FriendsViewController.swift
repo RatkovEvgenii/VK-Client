@@ -6,22 +6,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FriendsViewController: UITableViewController, UISearchBarDelegate {
     var requestToAPI = RequestToAPI()
     var friends: [Friend] = []
+    var token: NotificationToken?
     
     @IBOutlet weak var searchBar: UISearchBar!
-//   // let contacts = [Contact (name: "Сергей Петров", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Ольга Куликова", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Яша Гогунский", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Володя Собалев", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Илья Кузьмин", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Гриша Петренко", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Настена Ивановна", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Вика Макорова", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Валентин Бузажи", icon: UIImage(named: "userIcon")!),
-//                    Contact (name: "Яков Матроскин", icon: UIImage(named: "userIcon")!),]
+
     var sections: [String: [Friend]] = [:]
     var keys: [String] = []
     var filteredContacts: [Friend] = []
@@ -29,6 +22,7 @@ class FriendsViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        let db = Database()
         
         //        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         //        self.view.addGestureRecognizer(hideKeyboardGesture)
@@ -36,7 +30,8 @@ class FriendsViewController: UITableViewController, UISearchBarDelegate {
         requestToAPI.setURL(url: setURL())
         requestToAPI.getResult(handler: { items in
             DispatchQueue.main.async{
-                self.friends = items
+                db.saveFriendData(items)
+                self.friends = db.read()!
                 self.filteredContacts = self.friends
                 self.configurateSectionsAndKeys()
                 self.tableView.reloadData()
@@ -44,11 +39,9 @@ class FriendsViewController: UITableViewController, UISearchBarDelegate {
               
             }
         })
-        
-        
-       
+        addTokenDatabase()
     }
-    
+
 
 
     func configurateSectionsAndKeys() {
@@ -96,11 +89,13 @@ class FriendsViewController: UITableViewController, UISearchBarDelegate {
         let key = keys[indexPath.section]
         let contact = sections[key]![indexPath.row]
         cell.userName.text = "\(contact.first_name) \(contact.last_name)"
-        requestToAPI.getImage(by: contact.photo_50, handler: { (data) in
+        requestToAPI.getImage(by: contact.photo_100, handler: { (data) in
             let image = UIImage(data: data!)
             cell.userAvatar.setImage(image!)
         })
-        //cell.userAvatar.setImage(contact.icon)
+        if contact.online == 1 {
+            cell.userAvatar.onlineShadow()
+        }
         
         return cell
     }
@@ -147,13 +142,37 @@ class FriendsViewController: UITableViewController, UISearchBarDelegate {
         urlComponents.path = "/method/friends.get"
         urlComponents.queryItems = [
             //URLQueryItem(name: "user_id", value: String(Session.instance.userID)),
-            URLQueryItem(name: "fields", value: "photo_50,online"),
+            URLQueryItem(name: "fields", value: "photo_100,online"),
             //URLQueryItem(name: "count", value: "3"),
             URLQueryItem(name: "access_token", value: String(Session.instance.token)),
             URLQueryItem(name: "v", value: "5.131")
         ]
         print (urlComponents.url)
         return urlComponents.url!
+    }
+    
+    func addTokenDatabase() {
+        guard let realm = try? Realm() else { return }
+        var listFriends = realm.objects(Friend.self)
+        token = listFriends.observe { [weak self] (changes: RealmCollectionChange) in
+            guard let tableView = self?.tableView else { return }
+            switch changes {
+            case .initial:
+                tableView.reloadData()
+            case .update(_, let deletions, let insertions, let modifications):
+                tableView.beginUpdates()
+            
+//                tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
+//                                     with: .automatic)
+//                tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
+//                                     with: .automatic)
+//                tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
+//                                     with: .automatic)
+                tableView.endUpdates()
+            case .error(let error):
+                fatalError("\(error)")
+            }
+        }
     }
     
 }

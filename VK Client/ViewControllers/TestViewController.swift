@@ -19,6 +19,7 @@ class TestViewController: UIViewController {
             
             
         })
+        print("!!! test vc width = \(self.view.bounds.width)")
         // Do any additional setup after loading the view.
     }
     

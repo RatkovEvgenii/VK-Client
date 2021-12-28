@@ -23,21 +23,23 @@ class WebLoginViewController: UIViewController {
             URLQueryItem(name: "client_id", value: "7916063"),
             URLQueryItem(name: "display", value: "mobile"),
             URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
-            URLQueryItem(name: "scope", value: "262150"),
-            URLQueryItem(name: "response_type", value: "token"),
-            URLQueryItem(name: "v", value: "5.68")
+                URLQueryItem(name: "scope", value: "262150"),
+                //URLQueryItem(name: "scope", value: "offline"),
+                URLQueryItem(name: "response_type", value: "token"),
+                URLQueryItem(name: "v", value: "5.68")
             ]
             
             let request = URLRequest(url: urlComponents.url!)
             
             webview.load(request)
             
+            
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("!!! web vc display width = ", self.view.bounds.width)
     }
 
 }
@@ -66,12 +68,7 @@ extension WebLoginViewController: WKNavigationDelegate {
         
         Session.instance.token = token ?? ""
         Session.instance.userID = userID ?? 0
-       
         print("получили токен и айди")
-        
-        
-
-        
         decisionHandler(.cancel)
         if let newViewController = storyboard?.instantiateViewController(withIdentifier: "BarViewController") as? BarViewController {
             newViewController.modalTransitionStyle = .crossDissolve // это значение можно менять для разных видов анимации появления

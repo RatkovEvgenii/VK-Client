@@ -13,6 +13,10 @@ class CustomImageView: UIView {
     var width: CGFloat = 0
     var images: [UIImage] = []
     
+    func onlineShadow(){
+        layer.shadowColor = UIColor.green.cgColor
+    }
+    
     func  setImage(_ newImage: UIImage){
         imageView = UIImageView(frame: self.bounds)
         imageView?.image = newImage
@@ -37,7 +41,7 @@ class CustomImageView: UIView {
     override func draw(_ rect: CGRect) {
         layer.shadowColor = UIColor.label.cgColor
         layer.shadowOffset = .zero
-        layer.shadowRadius = 12
+        layer.shadowRadius = 4
         layer.shadowOpacity = 1.0
         
         let likeTapGesture = UITapGestureRecognizer(target: self, action: #selector(tuch(_:)))

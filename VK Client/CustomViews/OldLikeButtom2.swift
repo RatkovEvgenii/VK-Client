@@ -1,7 +1,7 @@
 
 import UIKit
 
-@IBDesignable class LikeButtom: UIControl {
+@IBDesignable class OldLikeButtom2: UIControl {
     private var button: UIButton? = nil
     private var label: UILabel? = nil
     private var stackView: UIStackView!

@@ -10,7 +10,9 @@ import UIKit
 class NewsViewController: UITableViewController {
 
 
-    
+    var displayWight: CGFloat = 0
+    var height: CGFloat = 0
+    var width: CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +20,7 @@ class NewsViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     // MARK: - Table view data source
@@ -35,12 +37,21 @@ class NewsViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "news", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "news", for: indexPath) as! NewsViewCell
 
-        // Configure the cell...
-
+        cell.autorAvatar.setImage(UIImage(named: "vk")!)
+        displayWight = view.bounds.width
+        print("!!! news vc width = \(self.view.frame.width)")
+        cell.customInit(width: displayWight)
         return cell
     }
+    
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 60 + displayWight + (displayWight/14) + 60
+//        
+//        
+//
+//    }
     
    
     /*

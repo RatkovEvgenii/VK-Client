@@ -47,10 +47,7 @@ class RequestToAPI {
                     let items = response?.items
                     
                     //print(items!.count)
-                    DispatchQueue.main.async{
-                        self.saveFriendData(items!)
-                        
-                    }
+                    
                     handler(items!)
                 } else {
                     print("json parse error")
@@ -71,25 +68,7 @@ class RequestToAPI {
         }
     }
     //сохранение погодных данных в Realm
-        func saveFriendData(_ friends: [Friend]) {
-    // обработка исключений при работе с хранилищем
-            do {
-    // получаем доступ к хранилищу
-                let realm = try Realm()
-                
-    // начинаем изменять хранилище
-                realm.beginWrite()
-                
-    // кладем все объекты класса погоды в хранилище
-                realm.add(friends)
-                
-    // завершаем изменения хранилища
-                try realm.commitWrite()
-            } catch {
-    // если произошла ошибка, выводим ее в консоль
-                print(error)
-            }
-        }
+      
 
 }
 // 

@@ -12,8 +12,7 @@ class CustomImageViewWithSlideAnimate: UIView {
     var firstImageView: UIImageView? = nil
     //var secondImageView: UIImageView? = nil
     var isFirstImageOnScreen = true
-    var height: CGFloat = 0
-    var width: CGFloat = 0
+
     
     var images: [UIImage] = [UIImage(systemName: "heart")!, UIImage(systemName: "pencil")!, UIImage(systemName: "tray")!, UIImage(systemName: "doc")!, UIImage(systemName: "book")!, UIImage(systemName: "heart")!, UIImage(systemName: "pencil")!, UIImage(systemName: "tray")!, UIImage(systemName: "doc")!, UIImage(systemName: "book")!]
     var index: Int = 0
@@ -32,13 +31,16 @@ class CustomImageViewWithSlideAnimate: UIView {
     }
     
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        print("!!! first init in  CIV display width = ", self.bounds.width)
+//    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         //let likeTapGesture = UITapGestureRecognizer(target: self, action: #selector(tuch(_:)))
+        
+        
         
         let swipeRightRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight(_:)))
         swipeRightRecognizer.direction = .right
@@ -46,12 +48,16 @@ class CustomImageViewWithSlideAnimate: UIView {
         swipeLeftRecognizer.direction = .left
         self.addGestureRecognizer(swipeRightRecognizer)
         self.addGestureRecognizer(swipeLeftRecognizer)
-        height = self.frame.height
-        width = self.frame.width
+//        height = self.bounds.height
+//        width = self.frame.width
+//        print("!!! second init in  CIV  height = \(height), width = \(width)")
         firstImageView = UIImageView(frame: self.bounds)
         setImage(i: 0)
         firstImageView?.backgroundColor = .green
         self.addSubview(firstImageView!)
+        
+        
+        
         //secondImageView = UIImageView(frame: CGRect(x: width + 5, y: 0, width: width, height: height))
         //secondImageView?.backgroundColor = .red
         // self.addSubview(secondImageView!)
@@ -60,6 +66,20 @@ class CustomImageViewWithSlideAnimate: UIView {
         
        
     }
+    func customInit(width: CGFloat) {
+        let swipeRightRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight(_:)))
+        swipeRightRecognizer.direction = .right
+        let swipeLeftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft(_:)))
+        swipeLeftRecognizer.direction = .left
+        self.addGestureRecognizer(swipeRightRecognizer)
+        self.addGestureRecognizer(swipeLeftRecognizer)
+
+        firstImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: width))
+        setImage(i: 0)
+        firstImageView?.backgroundColor = .green
+        self.addSubview(firstImageView!)
+    }
+    
     
     @objc func swipeRight(_ sender: UIButton){
         print("swipe right" )

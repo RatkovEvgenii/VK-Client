@@ -16,7 +16,7 @@ class UserGroupViewController: UITableViewController, UISearchBarDelegate {
         searchBar.delegate = self
         filteredGroups = groups
 
-       
+        
     }
 
     // MARK: - Table view data source
@@ -54,6 +54,7 @@ class UserGroupViewController: UITableViewController, UISearchBarDelegate {
                 if !groups.contains(group) {
                     // Добавляем город в список выбранных
                     groups.append(group)
+                    filteredGroups = groups
                     // Обновляем таблицу
                     tableView.reloadData()
                 }
